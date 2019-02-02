@@ -6,6 +6,7 @@ import "C"
 import (
 	"flag"
 	"fmt"
+	"math"
 	"os"
 )
 
@@ -44,14 +45,11 @@ func main() {
 	height := float64(C.MagickGetImageHeight(mw))
 	width := float64(C.MagickGetImageWidth(mw))
 
-	newHeight := int(height * (*scale))
-	newWidth := int(width * (*scale))
-	if newHeight < 1 {
-		newHeight = 1
-	}
-	if newWidth < 1 {
-		newWidth = 1
-	}
+	newHeight := math.Round(math.Max(height*(*scale), 1))
+	newWidth := math.Round(math.Max(width*(*scale), 1))
+
+	// Resize the image using the Lanczos filter
+	// The blur factor is a "double", where > 1 is blurry, < 1 is sharp
 	C.MagickResizeImage(mw, C.ulong(newWidth), C.ulong(newHeight), C.LanczosFilter, 1)
 
 	// Write the new image

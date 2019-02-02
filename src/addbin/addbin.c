@@ -8,6 +8,7 @@
 int main(int argc, char** argv) {
     if (argc != 2) {
         fprintf(stderr, "Need exactly one argument, got %d\n", argc - 1);
+        return 1;
     }
 
     char *end;
@@ -20,5 +21,5 @@ int main(int argc, char** argv) {
           return 1;
     }
 
-    printf("%d + one is %d\n", var, add_one(var));
+    printf("C says: %d + one is %d\n", var, add_one(var));
 }
