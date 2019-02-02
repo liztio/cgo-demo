@@ -1,0 +1,8 @@
+/addbin
+/c_from_go
+/imagemagick
+/src/gofromc/_obj/
+/src/gofromc/dy.c
+/src/gofromc/greet.a
+/src/gofromc/_cgo_export.h
+src/gofromc/gofromc

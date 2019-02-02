@@ -6,7 +6,7 @@ _cgo_export.h: greet.go
 greet.a: greet.go
 	go build -buildmode=c-archive $^
 
-gofromc: main.c _cgo_export.h # greet.a
+gofromc: main.c _cgo_export.h greet.a
 	$(CC) -o $@ $^ -lpthread
 
 clean:
