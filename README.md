@@ -2,7 +2,7 @@
 
 `make all`
 
-## [Addlib](blob/master/src/addlib)
+## [Addlib](src/addlib)
 
 _A .so for adding two numbers together_
 
@@ -10,7 +10,7 @@ _A .so for adding two numbers together_
 make -C src/addlib
 ```
 
-## [Addbin](blob/master/cmd/addbin)
+## [Addbin](cmd/addbin)
 A go library that calls [Addlib](#Addlib)
 
 ```
@@ -18,7 +18,7 @@ make addbin
 LD_LIBRARY_PATH=src/addlib addbin
 ```
 
-## [Imagemagick] (blob/master/cmd/imagemagick)
+## [Imagemagick](cmd/imagemagick)
 _A small example Go application using libimagemagick_
 
 May require `libmagickwand-6-headers` to compile and `libmagickwand-6.q16`
@@ -28,7 +28,7 @@ make imagemagick
 ./imagemagick
 ```
 
-## [C_from_go](blob/master/cmd/c_from_go)
+## [C_from_go](cmd/c_from_go)
 _An example of calling C from Go_
 
 ```shell
@@ -36,7 +36,7 @@ make c_from_go
 ./c_from_go
 ```
 
-## [gofromc](blob/master/src/gofromc)
+## [gofromc](src/gofromc)
 An example of calling go from C
 
 ```shell
