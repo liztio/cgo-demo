@@ -1,3 +1,5 @@
+.PHONY: all clean
+
 all: addbin
 
 CFLAGS=-Wall -Werror
@@ -11,4 +13,4 @@ run: addbin
 	LD_LIBRARY_PATH="../addlib:$LD_LIBRARY_PATH" ./addbin 10
 
 clean:
-	rm addbin
+	rm -f addbin

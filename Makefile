@@ -12,8 +12,10 @@ all:
 	@make cfromgo
 
 clean:
-	rm addbin c_from_go imagemagick
+	rm -f addbin c_from_go imagemagick
 	@make -C src/addlib clean
+	@make -C src/gofromc clean
+	@make -C src/addbin clean
 
 src/addlib/addlib.a: src/addlib/addlib.c
 	$(CC)

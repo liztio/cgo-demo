@@ -8,3 +8,4 @@
 src/gofromc/gofromc
 /src/addbin/addbin
 /src/addlib/libaddlib.so
+/src/addlib/addlib.h.gch

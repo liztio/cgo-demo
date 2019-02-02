@@ -10,4 +10,4 @@ gofromc: main.c _cgo_export.h greet.a
 	$(CC) -o $@ $^ -lpthread
 
 clean:
-	rm -r _cgo_export.h greet.a _obj gofromc
+	rm -fr _cgo_export.h greet.a _obj gofromc
